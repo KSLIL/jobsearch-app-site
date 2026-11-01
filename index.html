@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Job Search — поиск работы с ИИ на вашем компьютере</title>
+<meta name="description" content="Настольное приложение для Windows: ищет вакансии, честно оценивает их по вашему профилю, готовит резюме и письмо в PDF. Данные остаются на вашем компьютере.">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">К содержанию</a>
+<header class="top">
+  <div class="wrap top-row">
+    <a class="brand" href="#top" aria-label="AI Job Search">
+      <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="2" y="2" width="28" height="28" rx="8" class="b-bg"/><path d="M9 20l4-8 4 6 3-4 3 6" class="b-line"/><circle cx="23" cy="10" r="2.4" class="b-dot"/></svg>
+      <span>AI Job Search</span>
+    </a>
+    <nav class="links" aria-label="Разделы">
+      <a href="#how" data-i18n="nav.how">Как работает</a>
+      <a href="#features" data-i18n="nav.features">Возможности</a>
+      <a href="#privacy" data-i18n="nav.privacy">Приватность</a>
+      <a href="#superjob" data-i18n="nav.api">API SuperJob</a>
+    </nav>
+    <div class="tools">
+      <button class="chip" id="lang" type="button" aria-label="Switch language">EN</button>
+      <button class="chip" id="theme" type="button" aria-label="Тема"><span class="sun" aria-hidden="true">☀</span><span class="moon" aria-hidden="true">☾</span></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text">
+      <p class="eyebrow reveal" data-i18n="hero.eyebrow">Настольное приложение для Windows</p>
+      <h1 class="reveal" data-i18n-html="hero.title">Поиск работы с ИИ — <span class="grad">на вашем компьютере</span></h1>
+      <p class="lead reveal" data-i18n="hero.lead">Находит вакансии в открытых источниках, честно оценивает их по вашему профилю и готовит резюме и сопроводительное письмо в PDF. Отклик отправляете вы сами.</p>
+      <div class="cta reveal">
+        <span class="btn primary" data-i18n="hero.soon">Скоро · предварительная версия</span>
+        <a class="btn" href="#how" data-i18n="hero.more">Как это работает</a>
+      </div>
+      <dl class="stats">
+        <div class="reveal"><dt><span class="count" data-to="9">0</span></dt><dd data-i18n="stat.sources">источников вакансий</dd></div>
+        <div class="reveal"><dt><span class="count" data-to="5">0</span></dt><dd data-i18n="stat.batch">вакансий в одном запросе к локальной модели</dd></div>
+        <div class="reveal"><dt><span class="count" data-to="0">0</span></dt><dd data-i18n="stat.sent">писем работодателям без вашего решения</dd></div>
+      </dl>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="orb o1" data-parallax="0.18"></div>
+      <div class="orb o2" data-parallax="-0.12"></div>
+      <div class="window" data-parallax="0.06">
+        <div class="win-bar"><i></i><i></i><i></i><span>AI Job Search</span></div>
+        <div class="win-body">
+          <div class="mock-card good"><b>Руководитель группы поддержки</b><span>Удалённо · 2 500 $</span><em>Подходит · 86</em></div>
+          <div class="mock-card check"><b>Специалист поддержки L2</b><span>Минск · гибрид</span><em>Проверить · 61</em></div>
+          <div class="mock-card bad"><b>Оператор чата (обучение платное)</b><span>Telegram</span><em>Не подходит</em></div>
+          <div class="mock-cover">
+            <span class="bar" style="--w:78%"></span><span class="bar" style="--w:52%"></span><span class="bar" style="--w:64%"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pipeline-sec" id="how">
+  <div class="wrap">
+    <h2 class="reveal" data-i18n="how.title">От поиска до отклика — один понятный путь</h2>
+    <p class="sub reveal" data-i18n="how.sub">Каждый шаг виден и проверяем: откуда вакансия, почему такая оценка, что попало в резюме.</p>
+    <div class="pipeline" id="pipeline">
+      <svg class="pipe-line" viewBox="0 0 1000 60" preserveAspectRatio="none" aria-hidden="true"><path id="pipe-path" d="M20 30 C 200 0, 300 60, 500 30 S 800 0, 980 30"/></svg>
+      <ol>
+        <li class="step"><span class="dot">1</span><h3 data-i18n="p1.t">Поиск</h3><p data-i18n="p1.d">Открытые доски, Telegram-каналы, gsz.gov.by, SuperJob — по вашим ролям и близким формулировкам.</p></li>
+        <li class="step"><span class="dot">2</span><h3 data-i18n="p2.t">Оценка</h3><p data-i18n="p2.d">Правила отсеивают скам и стоп-факторы, модель ставит балл. Каждое решение — с цитатой.</p></li>
+        <li class="step"><span class="dot">3</span><h3 data-i18n="p3.t">Документы</h3><p data-i18n="p3.d">Резюме и письмо под вакансию в PDF — только из фактов вашего профиля.</p></li>
+        <li class="step"><span class="dot">4</span><h3 data-i18n="p4.t">Отклик</h3><p data-i18n="p4.d">Отправляете вы сами. Приложение лишь записывает факт отправки.</p></li>
+        <li class="step"><span class="dot">5</span><h3 data-i18n="p5.t">Доска</h3><p data-i18n="p5.d">Воронка откликов, ответы, интервью и напоминания «напомнить о себе?».</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="features">
+  <div class="wrap">
+    <h2 class="reveal" data-i18n="f.title">Что умеет</h2>
+    <div class="grid">
+      <article class="feat reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 014 4v1h1a3 3 0 010 6h-1v1a4 4 0 01-8 0v-1H7a3 3 0 010-6h1V7a4 4 0 014-4z"/></svg></div>
+        <h3 data-i18n="f1.t">Свой выбор модели</h3>
+        <p data-i18n="f1.d">Облачные агенты или локальные модели: LM Studio, Ollama, llama.cpp. Подсказки по длине ответа и контексту, чтобы модель не обрывалась.</p>
+      </article>
+      <article class="feat reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6"/><path d="M20 20l-4.5-4.5"/></svg></div>
+        <h3 data-i18n="f2.t">Источники</h3>
+        <p data-i18n="f2.d">Публичные доски вакансий, Telegram-каналы без аккаунта, gsz.gov.by, «Работа России», SuperJob через официальный API. Паузы и кэш — бережно к сайтам.</p>
+      </article>
+      <article class="feat reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 12l5 5L20 6"/></svg></div>
+        <h3 data-i18n="f3.t">Честная оценка</h3>
+        <p data-i18n="f3.d">Правила плюс модель. «Покрытие требований»: что подтверждено фактами, что частично, где честный пробел и каких слов ATS нет в профиле.</p>
+        <div class="coverage" aria-hidden="true">
+          <span class="cv ok">✓ Jira, SQL</span><span class="cv part">≈ английский B2 (в профиле B1)</span><span class="cv gap">— Kubernetes</span>
+        </div>
+      </article>
+      <article class="feat reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg></div>
+        <h3 data-i18n="f4.t">Резюме и письмо в PDF</h3>
+        <p data-i18n="f4.d">Под конкретную вакансию, без выдуманного опыта и канцелярита. Проверка текстового слоя для ATS.</p>
+      </article>
+      <article class="feat reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="5" height="16" rx="1"/><rect x="10" y="4" width="5" height="10" rx="1"/><rect x="17" y="4" width="4" height="6" rx="1"/></svg></div>
+        <h3 data-i18n="f5.t">Доска и воронка</h3>
+        <p data-i18n="f5.d">Отклики, ответы, интервью и офферы по источникам. Если ответа нет N дней — напоминание с черновиком письма.</p>
+      </article>
+      <article class="feat reveal">
+        <div class="ico"><svg viewBox="0 0 24 24"><path d="M21 4L3 11l6 2 2 6 3-4 4 3z"/></svg></div>
+        <h3 data-i18n="f6.t">Свайпы в Telegram</h3>
+        <p data-i18n="f6.d">Поиск по расписанию присылает лучшие вакансии по одной: «Интересно», «Неинтересно», «Откликнуться» — документы приходят в чат.</p>
+        <div class="phone" aria-hidden="true"><div class="bubble">Руководитель поддержки · 86</div><div class="btns"><span>👍</span><span>👎</span><span>✍️</span></div></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="privacy" class="band">
+  <div class="wrap two">
+    <div>
+      <h2 class="reveal" data-i18n="pr.title">Ваши данные остаются у вас</h2>
+      <p class="reveal" data-i18n="pr.lead">Профиль, вакансии, документы и история хранятся на вашем компьютере. Ключи API — в защищённом хранилище Windows.</p>
+    </div>
+    <ul class="checks">
+      <li class="reveal" data-i18n="pr.1">Без аккаунта в нашем сервисе и без телеметрии</li>
+      <li class="reveal" data-i18n="pr.2">Ключи хранятся в защищённом хранилище Windows (DPAPI), в файлах их нет</li>
+      <li class="reveal" data-i18n="pr.3">Капчи не обходятся: любую проверку проходит человек</li>
+      <li class="reveal" data-i18n="pr.4">Работодателям ничего не отправляется автоматически</li>
+    </ul>
+  </div>
+</section>
+
+<section id="superjob">
+  <div class="wrap narrow">
+    <h2 class="reveal" data-i18n="sj.title">Использование API SuperJob</h2>
+    <ul class="plain reveal">
+      <li data-i18n="sj.1">Только поиск вакансий через официальный API SuperJob (метод списка вакансий).</li>
+      <li data-i18n="sj.2">В пределах лимитов API: пауза между запросами, не больше нескольких страниц на запрос.</li>
+      <li data-i18n="sj.3">Контакты работодателей и персональные данные не собираются и не передаются третьим лицам.</li>
+      <li data-i18n="sj.4">Каждый пользователь работает со своим ключом приложения; ключ хранится только на его компьютере.</li>
+      <li data-i18n="sj.5">Результаты показываются пользователю со ссылкой на вакансию на superjob.ru.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="contact">
+  <div class="wrap narrow reveal">
+    <h2 data-i18n="c.title">Связаться</h2>
+    <p data-i18n-html="c.text">Вопросы и предложения — через <a href="https://github.com/KSLIL/jobsearch-app-site/issues">GitHub Issues</a>. Сборка приложения — по запросу.</p>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><p data-i18n="foot">AI Job Search · предварительная версия · основано на открытом проекте ai-job-search (MIT)</p></div>
+</footer>
+<script src="assets/app.js" defer></script>
+</body>
+</html>
